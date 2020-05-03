@@ -5,3 +5,5 @@ Run with
 ```
 python promiscuous-rs.py <upstream-route-server-ip> <upstream-route-server-as>
 ```
+
+I created this while [playing with routeing protocols](https://github.com/toelke/routing-experiments).
