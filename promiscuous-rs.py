@@ -53,7 +53,7 @@ def validate_open_msg_patched(bgpprotocol, open_msg):
 ryu.services.protocols.bgp.speaker.BgpProtocol._validate_open_msg = validate_open_msg_patched
 
 s = ryu.services.protocols.bgp.bgpspeaker.BGPSpeaker(as_number=131072, router_id='10.0.0.3')
-s.neighbor_add(sys.argv[1], sys.argv[2])
+s.neighbor_add(sys.argv[1], int(sys.argv[2]))
 s.out_filter_set(sys.argv[1], [PrefixFilter('0.0.0.0/0', PrefixFilter.POLICY_DENY)])
 while 1:
     eventlet.sleep(30)
