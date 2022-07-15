@@ -1,5 +1,5 @@
-FROM python:3
+FROM python:3.10.5
 
-RUN pip install ryu
-ADD promiscuous-rs.py /
+RUN pip --no-cache-dir install ryu
+COPY promiscuous-rs.py /
 ENTRYPOINT ["python", "/promiscuous-rs.py"]
