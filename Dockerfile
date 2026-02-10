@@ -1,4 +1,4 @@
-FROM python:3.14.2
+FROM python:3.14.3
 
 RUN pip --no-cache-dir install ryu
 COPY promiscuous-rs.py /
